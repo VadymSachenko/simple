@@ -1,6 +1,6 @@
 This the first line.
 This is the second line.
-And the third.
+And the third!
 
 This documentation describes how to use the Pavel robotic
 toothbrush.
