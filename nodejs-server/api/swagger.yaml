@@ -1,0 +1,46 @@
+---
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: "Music API"
+host: "api.muzicplayz.com"
+basePath: "/v3"
+schemes:
+- "https"
+paths:
+  /paylist:
+    get:
+      operationId: "paylistGET"
+      parameters:
+      - name: "limit"
+        in: "query"
+        required: false
+        type: "integer"
+      - name: "offset"
+        in: "query"
+        description: "Index of the first playlist to return. (0=start at the beginning,\
+          \ 10 = skip the first 10, etc.)"
+        required: false
+        type: "integer"
+      - name: "search"
+        in: "query"
+        description: "Return playlists whose name contains this string"
+        required: false
+        type: "string"
+      responses:
+        "200":
+          description: "Successful response"
+      x-swagger-router-controller: "Default"
+  /playlist/{playlist-id}:
+    delete:
+      operationId: "playlistPlaylist_idDELETE"
+      parameters:
+      - name: "playlist-id"
+        in: "query"
+        required: false
+        type: "string"
+      responses:
+        "200":
+          description: "Successful response"
+      x-swagger-router-controller: "Default"
+definitions: {}
